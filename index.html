@@ -31,30 +31,38 @@
 
       <p class="text">Please let us know how we did with your support request. All feedback is appreciated 
       to help us improve our offering!</p>
-      <form action="">
+      <form class="form">
+        <fieldset>
+          <div class="form-group">  
+            <input type="radio" name="option" id="option1" value="1">
+            <label for="option1">1</label>
 
-        <label for="terrible" class="label"><input type="checkbox" class="chk" value="1" id="terrible" name="terrible" cheked>1</label>
+            <input type="radio" name="option" id="option2" value="2">
+            <label for="option2">2</label>
 
-        <label for="bad" class="label"><input type="checkbox" class="chk" value="2"  id="bad" name="bad">2</label>
+            <input type="radio" name="option" id="option3" value="3">
+            <label for="option3">3</label>
 
-        <label for="normal" class="label">
-          <input type="checkbox" class="chk" value="3" id="normal" name="normal">3</label>
+            <input type="radio" name="option" id="option4" value="4">
+            <label for="option4">4</label>
 
-        <label for="good" class="label"><input type="checkbox" class="chk" value="4" id="good" name="good">4</label>
+            <input type="radio" name="option" id="option5" value="5">
+            <label for="option5">5</label>
 
-        <label for="excellent" class="label"><input type="checkbox"  class="chk" value="5" id="excellent" name="excellent">5</label>
-        
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </fieldset>
       </form>
 
-      <button class="btn">Submit</button>
+      
 
     </section>
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
     <section class="thank-you-section">
-      <img src="images/illustration-thank-you.svg" alt="thank you">
-      <p class="rating-select">You selected <span><!-- Add rating here --></span> out of 5</p>
+      <img src="images/illustration-thank-you.svg" class="thanks" alt="thank you">
+      <p class="rating-select">You selected <span class="option-selected"><!-- Add rating here --></span> out of 5</p>
 
       <h2 class="title-thanks">Thank you!</h2>
 

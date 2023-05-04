@@ -46,44 +46,51 @@ body{
             .text{
                 color: $light;
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 16px;
                 line-height:25px;
                 margin-bottom: 20px;
-
             }
-            form{
-                width: 100%;
+            .form{
                 display: flex;
-                justify-content: space-between;
-                
-                .label{
+                width: 100%;
+                fieldset{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: $light;
-                    background: $medium;
-                    text-align: center;
-                    border-radius: 25px;
-                    width: 50px;
-                    height: 50px;
-                    cursor: pointer;
-                    margin-bottom: 20px;
-                    z-index: 1;
-                    
+                    flex-direction: column;
+                    width: 100%;
+                    border: 0;
+                    .form-group{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        margin-bottom: 20px;
+                        
+                        label{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 25px;
+                            width: 50px;
+                            height: 50px;
+                            background: $medium;
+                            cursor: pointer;
+                            
+                        }
+                        label:hover{
+                            background: $medium-hover;
+                        }
+                        input[type="radio"]{
+                            width:1px;
+                            height: 1px;
+                            opacity: 0;
+                        }
+                        input[type="radio"]:checked + label{
+                            background: $color-primary;
+                        }
+                    }
                 }
-                .label:hover{
-                    background: hsl(216, 12%, 54%,0.5);
-                }
-                input[type="checkbox"]{
-                    width: 10px;
-                    height: 10px;
-                    opacity: 1;
-                    overflow: hidden;
-                    display: inline-block;
-                    
-                }
-             
+                
             }
+            
             .btn{
                 background: $color-primary;
                 border: 0;
@@ -95,11 +102,48 @@ body{
                 border-radius: 25px;
 
             }
+            .btn:hover{
+                background: $white-color;
+                color: $color-primary;
+                font-weight:400;
+            }
 
         }
-        .thank-you-section{
-            display:none;
+        .thank-you-section, .on .rating-ask{
+            display: none;
         }
+        .on .thank-you-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .thanks{
+                width: 45%;
+                margin-bottom: 20px;
+            }
+            .rating-select{
+                background:$medium;
+                padding: 10px 15px;
+                border-radius: 20px;
+                font-weight: 400;
+                color:$color-primary;
+                margin-bottom: 25px;
+            }
+            .title-thanks{
+                font-size: 25px;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+            .text{
+                color: $light;
+                text-align: center;
+                font-weight: 400;
+                font-size: 16px;
+                line-height:25px;
+                margin-bottom: 15px;
+            }
+        }
+        
     }
 
 }

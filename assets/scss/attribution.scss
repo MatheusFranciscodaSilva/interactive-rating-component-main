@@ -1,12 +1,11 @@
 .attribution { 
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
+    align-items: center;
     font-size: 12px; 
     text-align: center; 
     a { 
-
-        color: hsl(228, 45%, 44%);
+        margin: 2px;
+        color: $color-primary;
      }
 }
