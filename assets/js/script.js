@@ -8,15 +8,26 @@
 
     $btn.addEventListener("click", radioOption);
 
-    function radioOption() {
+    function radioOption(option) {
         var radio = document.getElementsByName("option");
         for(var i = 0; i < radio.length; i++){
             if(radio[i].checked){
-                console.log("Escolheu " + radio[i].value);
+                
+                alert("Escolheu " + radio[i].value);
+                var option = radio[i].value;
+                optionSelected(option);
             }
-            $ask.classList.add("on");
-            $thanks.classList.add("on");
+            
         }
+        
+        
 
     }
+    function optionSelected(option){
+        var select = option;
+        alert("Selected " + select);
+        var $span = document.querySelector(".option-select");
+        $span.innerHTML = "oi";
+    }
+    
 })()
