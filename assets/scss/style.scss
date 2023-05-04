@@ -1,0 +1,105 @@
+@import "variable.scss";
+@import "attribution.scss";
+*{  
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+    color:$white-color;
+}
+body{
+
+   background: $background; 
+}
+.main-content{
+    display: flex;
+    width: 350px;
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+    background: $dk-blue;
+    border-radius: 15px;
+    padding: 10px;
+    
+    .container{
+        display: flex;
+       
+        width: 90%;
+        margin: 20px 0;
+
+        .rating-ask{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .star{
+                width:15px;
+                height: 15px;
+                background-color: $medium;
+                padding: 12px;
+                border-radius: 20px;
+                margin-bottom: 15px;
+            }
+            .title{
+                font-weight: 700;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            .text{
+                color: $light;
+                font-weight: 400;
+                font-size: 15px;
+                line-height:25px;
+                margin-bottom: 20px;
+
+            }
+            form{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                
+                .label{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $light;
+                    background: $medium;
+                    text-align: center;
+                    border-radius: 25px;
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                    z-index: 1;
+                    
+                }
+                .label:hover{
+                    background: hsl(216, 12%, 54%,0.5);
+                }
+                input[type="checkbox"]{
+                    width: 10px;
+                    height: 10px;
+                    opacity: 1;
+                    overflow: hidden;
+                    display: inline-block;
+                    
+                }
+             
+            }
+            .btn{
+                background: $color-primary;
+                border: 0;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-size: 16px;
+                letter-spacing: 3px;
+                padding: 15px;
+                border-radius: 25px;
+
+            }
+
+        }
+        .thank-you-section{
+            display:none;
+        }
+    }
+
+}
