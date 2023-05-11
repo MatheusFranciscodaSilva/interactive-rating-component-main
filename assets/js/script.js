@@ -1,33 +1,33 @@
-(function(){
+
     
-   
+    
     var $btn = document.querySelector(".btn");
-    var $ask = document.querySelector(".rating-ask");
-    var $thanks = document.querySelector(".thank-you-section")
-    
 
-    $btn.addEventListener("click", radioOption);
+    //add aparencia
+    function thanks(){
+        var container = document.querySelector(".container");
+        container.classList.add("open");
+    }
 
-    function radioOption(option) {
-        var radio = document.getElementsByName("option");
-        for(var i = 0; i < radio.length; i++){
-            if(radio[i].checked){
-                
-                alert("Escolheu " + radio[i].value);
-                var option = radio[i].value;
-                optionSelected(option);
-            }
+    // result 
+    function resultOption(result){
+        var span = document.querySelector(".option-selected");
+        var text = document.createTextNode(result)
+        span.appendChild(text);
+
+    }
+
+    //botão que chama a função
+    $btn.addEventListener("click", function(){
+        var option = document.getElementsByName("option");
+        var container = document.querySelector("container");
+        for (var i = 0 ; i < option.length; i++){
             
+            if(option[i].checked){
+                var result = option[i].value;
+            }
         }
-        
-        
-
-    }
-    function optionSelected(option){
-        var select = option;
-        alert("Selected " + select);
-        var $span = document.querySelector(".option-select");
-        $span.innerHTML = "oi";
-    }
+        thanks();
+        resultOption(result);
+    })
     
-})()
