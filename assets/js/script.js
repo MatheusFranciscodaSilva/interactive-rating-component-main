@@ -3,13 +3,13 @@
     
     var $btn = document.querySelector(".btn");
 
-    //add aparencia
+    //change of appearance
     function thanks(){
         var container = document.querySelector(".container");
         container.classList.add("open");
     }
 
-    // result 
+    // print the result 
     function resultOption(result){
         var span = document.querySelector(".option-selected");
         var text = document.createTextNode(result)
@@ -17,7 +17,7 @@
 
     }
 
-    //botão que chama a função
+    //configure of button
     $btn.addEventListener("click", function(){
         var option = document.getElementsByName("option");
         var container = document.querySelector("container");
@@ -27,7 +27,11 @@
                 var result = option[i].value;
             }
         }
+
+        //calling - change of appearance 
         thanks();
+
+        //calling - print the result
         resultOption(result);
     })
     
